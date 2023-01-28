@@ -3,7 +3,7 @@ class person{
     constructor(objName){   //kurucu fonksiyonumuz. Yani bu klasstan bir object oluşturulduğında çağırmaya gerek kalmadan kendiliğinden çalışacak fonksiyon.
                                 //İki parametre alıyor. per ve target. Per class ımızın adını, target ise sonucun yazdırılacağı kutuyu -div- temsil ediyor.
         this.objName = objName;  //gelen objName parametresini this.objName adında bir class property oluşturarak ona aktardık ki scop dışında da kullanabilelim.
-        eval("c_" + objName).innerText = objName + " adında bir " + this.constructor.name + " nesnesi oluşturuldu. ";
+        eval("c_" + objName).innerHTML = "constructor() çalıştı. <br/>" objName + " adında bir " + this.constructor.name + " nesnesi oluşturuldu. ";
         eval("c_" + objName).style.backgroundColor = "blue";
     }
 
@@ -16,14 +16,14 @@ class person{
     set adi(newname){   //private olarak tanımlanmış _adı değişkenine değer atamak için tanımladığımız temsilci. Değer atarken bu temsilciyi -delege- kullanacağız.
                         //Bu sayede _adı dğişkenine değer atandığında veya değiştirildiğinde yapılmasını istediğimiz özel işlemler tanımlayabiliriz.
         this.yazma++;
-        eval("w_" + this.objName).innerText = this.objName + " nesnesine " + this.yazma + ". kez bir değer atandı: " + newname;
+        eval("w_" + this.objName).innerHTML = "delege (set) mesajı :<br/>" + this.objName + " nesnesine " + this.yazma + ". kez bir değer atandı: " + newname;
         eval("w_" + this.objName).style.backgroundColor = "blue";
         this._adi = newname;
     }
 
     get adi(){   // yine private olarak tanımlı _adı değişkeninden değer okumak için kullandığımız get fonksiyonu. Bu sayede birisi bu değeri okumak istediğinde özel işlemler tanımlayabiliriz.
         this.okuma++;
-        eval("r_" + this.objName).innerText = this.objName + "  nesnesinden  " + this.okuma + ". kez bir değer okundu: " + this._adi;
+        eval("r_" + this.objName).innerHTML = "delege (get) mesajı :<br/>" + this.objName + "  nesnesinden  " + this.okuma + ". kez bir değer okundu: " + this._adi;
         eval("r_" + this.objName).style.backgroundColor = "blue";
     }
 }
