@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        .govde{
+            width: 80%;
+            margin-inline: auto;
+        }
+        .container{
+            display:grid;
+            grid-template-columns: 300px 300px 300px;
+            gap: 5px;
+        }
+        .container div{
+            width: calc(100% - 10px);
+            height: 60px;
+            background-color: black;
+            color:white;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container govde">
+        <div id="c_per">Bir person nesnesi oluştur</div>
+        <div id="w_per">Person nesnesine bir değer ata</div>
+        <div id="r_per">Person nesnesinden bir değer oku</div>
+        <div id="c_er">Bir erkek nesnesi oluştur</div>
+        <div id="w_er">Erkek nesnesine bir değer ata</div>
+        <div id="r_er">Erkek nesnesinden bir değer oku</div>
+        <div id="c_ka">Bir kadın nesnesi oluştur</div>
+        <div id="w_ka">Kadın nesnesine bir değer ata</div>
+        <div id="r_ka">Kadın nesnesinden bir değer oku</div>
+    </div>
+
+    <div style = "height: 100px;"></div>
+    
+    <script src="class.js"></script>
+</body>
+</html>
